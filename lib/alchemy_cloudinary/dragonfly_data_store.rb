@@ -21,6 +21,9 @@ module AlchemyCloudinary
     end
 
     def url_for(uid, options = {})
+      puts "#################################################################"
+      puts options
+      puts "#################################################################"
       options = {format: ext(uid)}.merge(options)
       Cloudinary::Utils.cloudinary_url(public_id(uid), options)
     end
