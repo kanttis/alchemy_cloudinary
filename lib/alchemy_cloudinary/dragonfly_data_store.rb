@@ -25,6 +25,9 @@ module AlchemyCloudinary
       Cloudinary::Utils.cloudinary_url(public_id(uid), options)
     end
 
+    def server_root
+      "https://res.cloudinary.com/"
+    end
     private
 
     def public_id(uid)
