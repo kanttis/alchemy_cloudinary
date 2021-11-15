@@ -21,7 +21,10 @@ module AlchemyCloudinary
     end
 
     def url_for(uid, options = {})
+      # TODO: FIX THIS "TEMP FIX"
       puts "#################################################################"
+      options[:fetch_format] = :auto
+      options[:quality] = :auto
       puts options
       puts "#################################################################"
       options = {format: ext(uid)}.merge(options)
@@ -29,6 +32,7 @@ module AlchemyCloudinary
     end
 
     def server_root
+      # TODO: FIX THIS "TEMP FIX"
       "https://res.cloudinary.com/"
     end
     private
