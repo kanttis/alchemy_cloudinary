@@ -29,7 +29,7 @@ module AlchemyCloudinary
 
     def server_root
       # TODO: FIX THIS "TEMP FIX"
-      "https://res.cloudinary.com/"
+      "res.cloudinary.com"
     end
     private
 
