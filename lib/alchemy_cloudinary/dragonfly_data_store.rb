@@ -22,6 +22,7 @@ module AlchemyCloudinary
 
     def url_for(uid, options = {})
       # TODO: FIX THIS "TEMP FIX"
+      options[:secure] = true
       options[:transformation].append(:fetch_format => :auto, :quality => :auto)
       options = {format: ext(uid)}.merge(options)
       Cloudinary::Utils.cloudinary_url(public_id(uid), options)
